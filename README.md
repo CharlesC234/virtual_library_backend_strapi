@@ -1,3 +1,22 @@
+
+# This is a cloud hosted project, so when you push to this github repo your changes will automatically be pushed to production here: https://virtuallibrarybackendstrapi-production.up.railway.app . Nothing you do through the local gui (when you run the project on your laptop at localhost:1337) will be applied to the production site until you push to this github
+
+Steps to run:
+
+    1. Install node from here: https://nodejs.org/en/download (if not already installed)
+
+    2. Open a terminal in the directory you want the project in
+
+    3. Run this command: git clone https://github.com/CharlesC234/virtual_library_backend_strapi.git
+
+    4.CD into the newly created folder: cd virtual_library_backend_strapi
+
+    5. Run this command to install all required dependencies: npm install
+
+    6. Run the project with the following command: npm run develop
+
+    7. View the project in a web browser at http://localhost:1337
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
