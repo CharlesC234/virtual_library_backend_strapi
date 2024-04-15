@@ -1,5 +1,5 @@
 
-This is a cloud hosted project, so when you push to this github repo your changes will automatically be pushed to production here: https://virtuallibrarybackendstrapi-production.up.railway.app . Nothing you do through the local gui (when you run the project on your laptop at localhost:1337) will be applied to the production site until you push to this github
+This is a cloud hosted project, so when you push to this github repo your changes will automatically be pushed to production here: [https://virtuallibrarybackendstrapi-production.up.railway.app](https://virtuallibrarybackendstrapi-production.up.railway.app/admin/auth/login) . Nothing you do through the local gui (when you run the project on your laptop at localhost:1337) will be applied to the production site until you push to this github
 
 Steps to run:
 
