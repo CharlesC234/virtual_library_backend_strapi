@@ -4,7 +4,8 @@
   "info": {
     "singularName": "book",
     "pluralName": "books",
-    "displayName": "Book"
+    "displayName": "Book",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -27,6 +28,20 @@
       "type": "uid"
     },
     "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pages": {
+      "type": "biginteger"
+    },
+    "pdf": {
       "allowedTypes": [
         "images",
         "files",
@@ -35,9 +50,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "pages": {
-      "type": "biginteger"
     }
   }
 }
