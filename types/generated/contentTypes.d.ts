@@ -856,13 +856,13 @@ export interface ApiLibraryUserLibraryUser extends Schema.CollectionType {
     singularName: 'library-user';
     pluralName: 'library-users';
     displayName: 'Library_User';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     username: Attribute.String;
-    password: Attribute.Password;
     email: Attribute.Email;
     profilepic: Attribute.Media;
     user_id: Attribute.UID;
@@ -871,6 +871,7 @@ export interface ApiLibraryUserLibraryUser extends Schema.CollectionType {
       'oneToMany',
       'api::book.book'
     >;
+    password: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

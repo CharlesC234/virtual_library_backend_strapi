@@ -4,7 +4,8 @@
   "info": {
     "singularName": "library-user",
     "pluralName": "library-users",
-    "displayName": "Library_User"
+    "displayName": "Library_User",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -14,21 +15,19 @@
     "username": {
       "type": "string"
     },
-    "password": {
-      "type": "password"
-    },
     "email": {
       "type": "email"
     },
     "profilepic": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "user_id": {
       "type": "uid"
@@ -37,6 +36,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::book.book"
+    },
+    "password": {
+      "type": "string"
     }
   }
 }
