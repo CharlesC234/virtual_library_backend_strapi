@@ -13,19 +13,23 @@
   "pluginOptions": {},
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "isbn": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "author": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
       "type": "text"
     },
     "book_id": {
-      "type": "uid"
+      "type": "uid",
+      "targetField": "name"
     },
     "cover": {
       "type": "media",
@@ -44,7 +48,7 @@
     "pdf": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "files",
@@ -54,6 +58,10 @@
     },
     "publication_date": {
       "type": "date"
+    },
+    "public": {
+      "type": "boolean",
+      "required": true
     }
   }
 }

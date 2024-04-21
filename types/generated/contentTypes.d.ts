@@ -800,15 +800,16 @@ export interface ApiBookBook extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    isbn: Attribute.String;
-    author: Attribute.String;
+    name: Attribute.String & Attribute.Required;
+    isbn: Attribute.String & Attribute.Required;
+    author: Attribute.String & Attribute.Required;
     description: Attribute.Text;
-    book_id: Attribute.UID;
+    book_id: Attribute.UID<'api::book.book', 'name'>;
     cover: Attribute.Media;
     pages: Attribute.BigInteger;
-    pdf: Attribute.Media;
+    pdf: Attribute.Media & Attribute.Required;
     publication_date: Attribute.Date;
+    public: Attribute.Boolean & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -862,16 +863,20 @@ export interface ApiLibraryUserLibraryUser extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    username: Attribute.String;
+    username: Attribute.String & Attribute.Required;
     email: Attribute.Email;
     profilepic: Attribute.Media;
-    user_id: Attribute.UID;
+    user_id: Attribute.UID &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 10;
+      }>;
     books: Attribute.Relation<
       'api::library-user.library-user',
       'oneToMany',
       'api::book.book'
     >;
-    password: Attribute.String;
+    password: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

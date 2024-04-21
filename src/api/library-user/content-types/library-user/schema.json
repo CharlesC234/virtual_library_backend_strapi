@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "username": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
       "type": "email"
@@ -30,7 +31,9 @@
       ]
     },
     "user_id": {
-      "type": "uid"
+      "type": "uid",
+      "required": true,
+      "minLength": 10
     },
     "books": {
       "type": "relation",
@@ -38,7 +41,8 @@
       "target": "api::book.book"
     },
     "password": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }
