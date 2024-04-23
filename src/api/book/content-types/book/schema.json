@@ -66,9 +66,8 @@
       "type": "string"
     },
     "book_id": {
-      "type": "uid",
-      "required": true,
-      "targetField": "name"
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
     }
   }
 }

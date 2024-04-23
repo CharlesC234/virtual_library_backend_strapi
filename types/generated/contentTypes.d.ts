@@ -811,7 +811,8 @@ export interface ApiBookBook extends Schema.CollectionType {
     category: Attribute.String;
     publisher: Attribute.String;
     user_id: Attribute.String;
-    book_id: Attribute.UID<'api::book.book', 'name'> & Attribute.Required;
+    book_id: Attribute.UID &
+      Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
