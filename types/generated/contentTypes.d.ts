@@ -806,10 +806,12 @@ export interface ApiBookBook extends Schema.CollectionType {
     description: Attribute.Text;
     book_id: Attribute.UID<'api::book.book', 'name'>;
     cover: Attribute.Media;
-    pages: Attribute.BigInteger;
     pdf: Attribute.Media & Attribute.Required;
-    publication_date: Attribute.Date;
     public: Attribute.Boolean & Attribute.Required;
+    publication_year: Attribute.String;
+    category: Attribute.String;
+    publisher: Attribute.String;
+    user_id: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

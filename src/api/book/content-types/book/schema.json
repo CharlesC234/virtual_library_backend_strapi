@@ -42,9 +42,6 @@
         "audios"
       ]
     },
-    "pages": {
-      "type": "biginteger"
-    },
     "pdf": {
       "type": "media",
       "multiple": false,
@@ -56,12 +53,21 @@
         "audios"
       ]
     },
-    "publication_date": {
-      "type": "date"
-    },
     "public": {
       "type": "boolean",
       "required": true
+    },
+    "publication_year": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "user_id": {
+      "type": "string"
     }
   }
 }
