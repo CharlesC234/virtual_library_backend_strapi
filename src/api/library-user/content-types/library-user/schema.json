@@ -30,11 +30,6 @@
         "audios"
       ]
     },
-    "user_id": {
-      "type": "uid",
-      "required": true,
-      "minLength": 10
-    },
     "books": {
       "type": "relation",
       "relation": "oneToMany",
@@ -43,6 +38,10 @@
     "password": {
       "type": "string",
       "required": true
+    },
+    "user_id": {
+      "type": "customField",
+      "customField": "plugin::strapi-advanced-uuid.uuid"
     }
   }
 }

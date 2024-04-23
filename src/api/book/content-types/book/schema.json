@@ -27,10 +27,6 @@
     "description": {
       "type": "text"
     },
-    "book_id": {
-      "type": "uid",
-      "targetField": "name"
-    },
     "cover": {
       "type": "media",
       "multiple": false,
@@ -68,6 +64,11 @@
     },
     "user_id": {
       "type": "string"
+    },
+    "book_id": {
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
     }
   }
 }
