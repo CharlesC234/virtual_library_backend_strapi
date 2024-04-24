@@ -53,9 +53,6 @@
       "type": "boolean",
       "required": true
     },
-    "publication_year": {
-      "type": "string"
-    },
     "category": {
       "type": "string"
     },
@@ -68,6 +65,9 @@
     "book_id": {
       "type": "customField",
       "customField": "plugin::strapi-advanced-uuid.uuid"
+    },
+    "publication_year": {
+      "type": "biginteger"
     }
   }
 }

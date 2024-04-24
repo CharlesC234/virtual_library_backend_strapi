@@ -807,12 +807,12 @@ export interface ApiBookBook extends Schema.CollectionType {
     cover: Attribute.Media;
     pdf: Attribute.Media & Attribute.Required;
     public: Attribute.Boolean & Attribute.Required;
-    publication_year: Attribute.String;
     category: Attribute.String;
     publisher: Attribute.String;
     user_id: Attribute.String;
     book_id: Attribute.UID &
       Attribute.CustomField<'plugin::strapi-advanced-uuid.uuid'>;
+    publication_year: Attribute.BigInteger;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
